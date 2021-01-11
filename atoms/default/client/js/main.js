@@ -34,12 +34,11 @@ if (
 }
 
 
-
+var target = document.getElementById('securedrop-eyes-target');
+var targetY = target.getBoundingClientRect().top;
 document.onscroll = throttle(function (e) {
   if (isMobile()) {
     var windowY = window.innerHeight;
-    var target = document.getElementById('securedrop-eyes-target');
-    var targetY = target.getBoundingClientRect().top;
 
     var cursorX = window.innerWidth * 2 / 3
     var cursorY = windowY - targetY;
